@@ -12,13 +12,6 @@ const services = [
   { icon: Clock, title: "Atendimento B2B", description: "Postos, lojas de auto peças, frotistas, agronegócio e operações diesel.", time: "PI · MA" },
 ];
 
-const oils = [
-  { name: "Sintético 5W-30", brand: "Shell Helix", type: "Sintético", compatible: "Veículos flex e gasolina modernos", price: "R$ 89,90" },
-  { name: "Semi-sintético 10W-40", brand: "Castrol Magnatec", type: "Semi-sintético", compatible: "Motores diesel e gasolina", price: "R$ 64,90" },
-  { name: "Sintético 0W-20", brand: "Mobil 1", type: "Sintético", compatible: "Motores de alto desempenho", price: "R$ 119,90" },
-  { name: "Mineral 15W-40", brand: "Lubrax", type: "Mineral", compatible: "Motores antigos e diesel pesado", price: "R$ 39,90" },
-];
-
 export default function LubrificantesPage() {
   return (
     <>
@@ -108,41 +101,42 @@ export default function LubrificantesPage() {
         </div>
       </section>
 
-      {/* Oils */}
+      {/* CTA — Inscrição Cacique Frotas */}
       <section className="section-padding bg-[#F6F7F9]">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="font-heading font-black text-4xl text-gray-900">
-              Nossos Óleos
-            </h2>
-            <p className="text-gray-500 mt-3">Trabalhamos com as melhores marcas do mercado</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {oils.map((oil, i) => (
-              <motion.div
-                key={oil.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-xl transition-all group"
+        <div className="container-custom max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative bg-gradient-to-br from-[#0D0D0D] via-[#1a0005] to-[#0D0D0D] rounded-3xl p-10 lg:p-16 text-center overflow-hidden shadow-2xl"
+          >
+            {/* Decorations */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#C8102E]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#F7B500]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
+            <div className="relative z-10">
+              <span className="inline-block bg-[#F7B500]/15 text-[#F7B500] text-sm font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-wide border border-[#F7B500]/30">
+                Lubrificantes para sua frota
+              </span>
+              <h2 className="font-heading font-black text-3xl lg:text-5xl text-white mb-4 leading-tight">
+                Solução completa em lubrificantes
+                <br />
+                <span className="text-[#F7B500]">para empresas e frotas</span>
+              </h2>
+              <p className="text-white/70 text-base lg:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                Atendimento B2B especializado, produtos homologados das melhores marcas e
+                condições comerciais exclusivas. Reduza custos da sua operação com a Cacique Lub.
+              </p>
+              <Link
+                href="/#cacique-frotas"
+                className="inline-flex items-center gap-2 bg-[#F7B500] hover:bg-[#D49A00] text-gray-900 font-bold text-base lg:text-lg px-8 lg:px-10 py-4 rounded-full transition-all hover:shadow-2xl hover:-translate-y-1"
               >
-                <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
-                  <Droplets size={18} className="text-white" />
-                </div>
-                <h3 className="font-bold text-gray-900 text-sm mb-1">{oil.name}</h3>
-                <p className="text-[#C8102E] text-xs font-semibold mb-2">{oil.brand}</p>
-                <span className="inline-block bg-blue-50 text-blue-600 text-xs px-2 py-0.5 rounded-full mb-3">
-                  {oil.type}
-                </span>
-                <p className="text-gray-500 text-xs leading-relaxed mb-4">{oil.compatible}</p>
-                <div className="flex items-center justify-between">
-                  <span className="font-heading font-black text-lg text-gray-900">{oil.price}</span>
-                  <span className="text-xs text-gray-400">/litro</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                Quero me inscrever
+                <ArrowRight size={20} />
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
