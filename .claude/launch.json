@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "rede-cacique",
+      "runtimeExecutable": "C:\\pnpm\\bin\\pnpm.CMD",
+      "runtimeArgs": ["dev"],
+      "port": 3000
+    }
+  ]
+}
