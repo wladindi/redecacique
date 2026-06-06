@@ -17,7 +17,7 @@ const variants = [
       "Bebidas geladas, snacks, alimentação rápida e itens essenciais para o dia a dia.",
       "Perfeita para quem quer resolver tudo em uma única parada com conforto e rapidez.",
     ],
-    textColor: "text-gray-900",
+    textColor: "text-white",
   },
   {
     bg: "bg-[#2D6FB4]",
