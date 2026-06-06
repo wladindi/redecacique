@@ -59,9 +59,9 @@ export function HeroSection() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="font-heading font-black text-4xl sm:text-5xl lg:text-7xl text-white leading-[1.05] mb-5 lg:mb-6 drop-shadow-lg"
             >
-              Com você em
+              Somos referência em abastecimento com
               <br />
-              <span className="text-[#F7B500]">todos os caminhos</span>
+              <span className="text-[#F7B500]">quase 6 décadas de excelência</span>
             </motion.h1>
 
             <motion.p
