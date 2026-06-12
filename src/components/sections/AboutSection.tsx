@@ -48,7 +48,8 @@ export function AboutSection() {
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Com qualidade, confiança e eficiência. Mais de 60 postos estrategicamente
                 distribuídos, com estrutura completa que inclui 16 lojas de conveniência,
-                26 unidades de autoatendimento e 2 distribuidoras de lubrificantes e produtos automotivos.
+                26 unidades de autoatendimento, 14 unidade de TRR e 2 distribuidoras de
+                lubrificantes e produtos automotivos.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
                 Presente nas principais rotas do Norte e Nordeste, atuamos diretamente no
