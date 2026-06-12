@@ -44,7 +44,7 @@ export function CTASection() {
             </h2>
 
             <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-              Mais de 55 anos abastecendo o Nordeste com combustível de qualidade,
+              Quase 60 anos abastecendo o Norte e Nordeste com combustível de qualidade,
               conveniência e soluções completas para quem precisa de um parceiro
               de verdade.
             </p>

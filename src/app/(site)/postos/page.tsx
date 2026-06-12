@@ -35,10 +35,10 @@ export default function PostosPage() {
     <>
       {/* Hero — estilo cinematográfico igual ao da home */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
-        {/* Imagem de fundo — Posto Cacique noturno */}
+        {/* Imagem de fundo — Posto Cacique ao entardecer */}
         <Image
-          src="/images/hero-postos.png"
-          alt="Posto Cacique iluminado à noite"
+          src="/images/hero-postos-entardecer.jpg"
+          alt="Posto Cacique ao entardecer com céu colorido"
           fill
           priority
           className="object-cover object-center"
@@ -53,19 +53,23 @@ export default function PostosPage() {
 
         <div className="container-custom text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            {/* Logo Postos Cacique — branca, sem container */}
-            <div className="relative h-48 lg:h-72 w-full max-w-3xl mx-auto mb-8">
+            {/* Logo Postos Cacique com glow azul nas letras */}
+            <div className="relative h-36 lg:h-64 w-80 lg:w-[36rem] mx-auto mb-8">
               <Image
                 src="/images/logo-postos.png"
                 alt="Postos Cacique"
                 fill
                 priority
-                className="object-contain drop-shadow-2xl"
-                sizes="(max-width: 1024px) 700px, 900px"
+                className="object-contain"
+                style={{
+                  filter:
+                    "drop-shadow(0 0 25px rgba(27,58,92,0.95)) drop-shadow(0 0 50px rgba(27,58,92,0.7)) drop-shadow(0 4px 12px rgba(0,0,0,0.5))",
+                }}
+                sizes="(max-width: 1024px) 320px, 576px"
               />
             </div>
             <p className="text-white text-lg lg:text-xl max-w-2xl mx-auto drop-shadow-lg">
-              Mais de 60 postos nas principais rotas do Nordeste, com combustível
+              Mais de 60 postos nas principais rotas do Norte e Nordeste, com combustível
               testado e estrutura completa para sua jornada.
             </p>
           </motion.div>

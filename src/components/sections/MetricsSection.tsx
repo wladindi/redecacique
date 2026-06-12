@@ -12,23 +12,23 @@ const metrics = [
     value: 60,
     suffix: "+",
     label: "Postos",
-    description: "Distribuídos nas principais rotas do Nordeste",
+    description: "Distribuídos nas principais rotas do Norte e Nordeste",
     color: "bg-red-50 text-[#C8102E]",
   },
   {
     icon: Users,
-    value: 16,
-    suffix: "",
+    value: 40,
+    suffix: "+",
     label: "Lojas de Conveniência",
     description: "Variedade, agilidade e praticidade",
     color: "bg-amber-50 text-amber-600",
   },
   {
     icon: Fuel,
-    value: 26,
+    value: 14,
     suffix: "",
-    label: "Unidades Autoatendimento",
-    description: "Entrou, escolheu, pagou, seguiu",
+    label: "TRRs",
+    description: "Distribuição em escala para grandes consumidores",
     color: "bg-[#EBF2FA] text-[#1B3A5C]",
   },
   {
@@ -57,43 +57,36 @@ export function MetricsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block bg-[#EBF2FA] text-[#1B3A5C] text-sm font-bold px-4 py-2 rounded-full mb-4 tracking-wide uppercase">
-            Nossos Números
-          </span>
           <h2 id="metrics-title" className="font-heading font-black text-4xl lg:text-5xl text-gray-900 mb-4">
             Estrutura que move seu negócio
           </h2>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-            Mais de 55 anos abastecendo o Nordeste com combustível de qualidade,
+            Há quase 60 anos abastecendo o Norte e Nordeste com combustível de qualidade,
             conveniência e soluções completas para quem precisa de um parceiro de verdade.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
           {metrics.map((metric, i) => (
             <motion.div
               key={metric.label}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-[#C8102E]/30 hover:shadow-xl transition-all duration-300 text-center overflow-hidden"
+              className="group relative bg-white rounded-2xl p-10 border border-gray-100 hover:border-[#C8102E]/30 hover:shadow-xl transition-all duration-300 text-center overflow-hidden"
             >
               {/* Hover gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#C8102E]/0 to-[#C8102E]/0 group-hover:from-[#C8102E]/3 group-hover:to-transparent transition-all duration-300 rounded-2xl" />
 
               <div className="relative z-10">
-                <div className={`w-14 h-14 rounded-2xl ${metric.color} flex items-center justify-center mx-auto mb-5`}>
-                  <metric.icon size={24} />
-                </div>
-
-                <div className="font-heading font-black text-5xl text-gray-900 mb-2">
+                <div className="font-heading font-black text-6xl lg:text-7xl text-gray-900 mb-3">
                   <AnimatedCounter
                     to={metric.value}
                     suffix={metric.suffix}
                   />
                 </div>
 
-                <div className="font-heading font-bold text-gray-800 text-lg mb-2">
+                <div className="font-heading font-bold text-gray-900 text-xl mb-3">
                   {metric.label}
                 </div>
 

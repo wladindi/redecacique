@@ -24,7 +24,6 @@ const navItems = [
   },
   { label: "Fidelidade", href: "/fidelidade" },
   { label: "Notícias", href: "/noticias" },
-  { label: "Contato", href: "/contato" },
 ];
 
 export function Header() {

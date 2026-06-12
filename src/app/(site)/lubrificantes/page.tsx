@@ -6,10 +6,10 @@ import { Droplets, Clock, Shield, Wrench, CheckCircle, ArrowRight, Phone } from 
 import Link from "next/link";
 
 const services = [
-  { icon: Droplets, title: "Lubrificantes", description: "Distribuição oficial de lubrificantes para todos os mercados — automotivo, diesel e industrial.", time: "B2B" },
+  { icon: Droplets, title: "Lubrificantes", description: "Distribuição oficial de lubrificantes para todos os mercados — automotivo e industrial.", time: "B2B" },
   { icon: Wrench, title: "Aditivos e Fluidos", description: "Aditivos automotivos, fluidos especializados e produtos para manutenção preventiva.", time: "B2B" },
-  { icon: Shield, title: "Peças Automotivas", description: "Peças e soluções para mercados automotivo e diesel — qualidade e procedência garantida.", time: "B2B" },
-  { icon: Clock, title: "Atendimento B2B", description: "Postos, lojas de auto peças, frotistas, agronegócio e operações diesel.", time: "PI · MA" },
+  { icon: Shield, title: "Peças e soluções", description: "Peças e soluções para mercados automotivo e industrial — qualidade e procedência garantida.", time: "B2B" },
+  { icon: Clock, title: "Suporte para agronegócio", description: "Postos, lojas de auto peças, frotistas, agronegócio e operações industriais.", time: "PI · MA" },
 ];
 
 export default function LubrificantesPage() {
@@ -26,35 +26,35 @@ export default function LubrificantesPage() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        {/* Overlay escuro sutil */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/75 via-[#0D0D0D]/40 to-[#0D0D0D]/65" />
-        {/* Toque navy discreto na base */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A5C]/30 via-transparent to-transparent" />
-        {/* Vinheta para o centro */}
-        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0.25) 0%, transparent 70%)" }} />
+        {/* Overlay escuro para destacar o logo */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/85 via-[#0D0D0D]/65 to-[#0D0D0D]/80" />
+        {/* Toque navy na base */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A5C]/45 via-transparent to-transparent" />
+        {/* Vinheta forte para o centro destacar o logo */}
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 40%, transparent 75%)" }} />
 
         <div className="container-custom relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            {/* Logo Cacique Lubrificantes — colorida natural */}
-            <div className="relative h-48 lg:h-72 w-full max-w-3xl mx-auto mb-8">
+            {/* Logo Cacique Lubrificantes com glow azul nas letras */}
+            <div className="relative h-56 lg:h-96 w-[24rem] lg:w-[52rem] max-w-full mx-auto mb-8">
               <Image
-                src="/images/logo-lub-color.png"
+                src="/images/logo-lub-novo.png"
                 alt="Cacique Lubrificantes"
                 fill
                 priority
-                className="object-contain drop-shadow-2xl"
-                sizes="(max-width: 1024px) 700px, 900px"
+                className="object-contain"
+                style={{
+                  filter:
+                    "drop-shadow(0 0 25px rgba(27,58,92,0.95)) drop-shadow(0 0 50px rgba(27,58,92,0.7)) drop-shadow(0 4px 12px rgba(0,0,0,0.5))",
+                }}
+                sizes="(max-width: 1024px) 384px, 832px"
               />
             </div>
             <p className="text-white text-lg lg:text-xl max-w-2xl mx-auto drop-shadow-lg">
               Distribuidora oficial desde 1998. Lubrificantes, aditivos, fluidos automotivos,
-              peças e soluções para mercados automotivo e diesel no Piauí e Maranhão.
+              peças e soluções para mercados automotivo e industrial no Piauí e Maranhão.
             </p>
             <div className="flex flex-wrap gap-4 justify-center mt-8">
-              <Link href="/postos" className="flex items-center gap-2 bg-[#C8102E] hover:bg-[#8E001A] text-white font-bold px-8 py-4 rounded-full transition-all hover:shadow-2xl hover:-translate-y-0.5">
-                <Droplets size={18} />
-                Encontrar Posto
-              </Link>
               <a href="tel:8632288888" className="flex items-center gap-2 border border-white/40 text-white font-bold px-8 py-4 rounded-full hover:bg-white/10 transition-all backdrop-blur-sm">
                 <Phone size={18} />
                 Agendar Serviço

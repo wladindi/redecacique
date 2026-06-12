@@ -4,12 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Star, ChevronDown } from "lucide-react";
 
-const stats = [
-  { value: "60+", label: "Unidades" },
-  { value: "4", label: "Estados" },
-  { value: "6+", label: "Décadas" },
-];
-
 export function HeroSection() {
   return (
     <section
@@ -19,7 +13,7 @@ export function HeroSection() {
       {/* === MOBILE: Foto da funcionária no topo + texto embaixo (estilo Decio) === */}
       <div className="absolute inset-0 lg:hidden">
         <Image
-          src="/images/hero-frentista.png"
+          src="/images/hero-frentista-onibus.png"
           alt="Frentista Rede Cacique sorrindo"
           fill
           priority
@@ -57,7 +51,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-heading font-black text-4xl sm:text-5xl lg:text-7xl text-white leading-[1.05] mb-5 lg:mb-6 drop-shadow-lg"
+              className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-white leading-[1.1] mb-5 lg:mb-6 drop-shadow-lg"
             >
               Somos referência em abastecimento com
               <br />
@@ -70,8 +64,9 @@ export function HeroSection() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-white/90 text-base sm:text-lg lg:text-xl leading-relaxed mb-5 lg:mb-8 max-w-lg drop-shadow"
             >
-              Mais de 60 postos nas principais rotas do Nordeste, com combustível
-              testado e estrutura completa para sua jornada.
+              Mais de 60 postos, 14 unidades de abastecimento, mais de 30 lojas de
+              conveniência e 2 distribuidoras de produtos automotivos. Uma rede completa
+              para mover pessoas, negócios e o desenvolvimento do Nordeste.
             </motion.p>
 
             {/* Badge — entre descrição e stats */}
@@ -87,26 +82,10 @@ export function HeroSection() {
                 ))}
               </div>
               <span className="text-white text-xs sm:text-sm font-medium">
-                Desde 1970 no Nordeste
+                Desde 1968 no Nordeste
               </span>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="flex gap-6 sm:gap-8"
-            >
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <div className="font-heading font-black text-2xl sm:text-3xl text-white drop-shadow">
-                    {stat.value}
-                  </div>
-                  <div className="text-white/70 text-xs sm:text-sm">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
           </div>
 
           {/* Right — Foto da frentista (apenas desktop) */}
@@ -123,7 +102,7 @@ export function HeroSection() {
               {/* Container da foto */}
               <div className="relative aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-2xl border-2 border-white/10">
                 <Image
-                  src="/images/hero-frentista.png"
+                  src="/images/hero-frentista-onibus.png"
                   alt="Frentista da Rede Cacique abastecendo um veículo"
                   fill
                   priority

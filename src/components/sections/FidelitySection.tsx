@@ -10,7 +10,7 @@ const benefits = [
   {
     icon: Zap,
     title: "Pontos automáticos",
-    description: "Acumule pontos a cada litro abastecido, sem precisar fazer nada",
+    description: "Acumule pontos a cada litro abastecido.",
     color: "text-amber-500 bg-amber-50",
   },
   {

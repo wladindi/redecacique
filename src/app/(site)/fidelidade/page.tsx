@@ -5,15 +5,15 @@ export const dynamic = "force-dynamic";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Star, ChevronDown, HelpCircle } from "lucide-react";
+import { Star, ChevronDown, HelpCircle, Car, Truck, Home, Briefcase } from "lucide-react";
 
 const faqItems = [
   { q: "Como me cadastro no Cacique Fidelidade?", a: "O cadastro é 100% digital e gratuito. Basta baixar o app na Google Play ou App Store e fazer o cadastro com seus dados." },
-  { q: "Como acumulo pontos?", a: "Os pontos acumulam automaticamente a cada litro abastecido em qualquer posto Cacique. Sem necessidade de ação adicional." },
   { q: "Para quem é o programa?", a: "Motoristas, caminhoneiros, frotistas e clientes locais. Quem abastece na Rede Cacique pode participar e aproveitar os benefícios." },
-  { q: "Como resgato meus pontos?", a: "Pelo app, você troca seus pontos por mais de 100 itens exclusivos com descontos especiais — produtos da conveniência, combustível e muito mais." },
+  { q: "Como resgato meus pontos?", a: "Pelo app, você troca seus pontos por mais de 100 itens exclusivos com descontos especiais — produtos da conveniência, utilidades, produtos automotivos e muito mais." },
   { q: "Preciso de cartão físico?", a: "Não. O programa é 100% digital, sem cartão físico. Tudo funciona pelo app no seu smartphone." },
   { q: "Quando começam a contar meus pontos?", a: "A partir do seu próximo abastecimento após o cadastro, os pontos começam a acumular automaticamente." },
+  { q: "Eu preciso pagar para ter acesso?", a: "Não, o programa fidelidade é totalmente de GRAÇA." },
 ];
 
 
@@ -31,15 +31,19 @@ export default function FidelidadePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Texto + logo à esquerda */}
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }} className="text-center lg:text-left">
-              {/* Logo Cacique Fidelidade */}
-              <div className="relative h-48 lg:h-64 w-full max-w-xl mx-auto lg:mx-0 mb-6">
+              {/* Logo Cacique Fidelidade com glow azul nas letras */}
+              <div className="relative h-52 lg:h-80 w-[22rem] lg:w-[40rem] mx-auto lg:mx-0 mb-6">
                 <Image
-                  src="/images/logo-fidelidade-color.png"
+                  src="/images/logo-fidelidade.png"
                   alt="Cacique Fidelidade"
                   fill
                   priority
-                  className="object-contain lg:object-left drop-shadow-2xl"
-                  sizes="(max-width: 1024px) 550px, 700px"
+                  className="object-contain lg:object-left"
+                  style={{
+                    filter:
+                      "drop-shadow(0 0 25px rgba(27,58,92,0.95)) drop-shadow(0 0 50px rgba(27,58,92,0.7)) drop-shadow(0 4px 12px rgba(0,0,0,0.5))",
+                  }}
+                  sizes="(max-width: 1024px) 352px, 640px"
                 />
               </div>
               <p className="text-white/80 text-lg lg:text-xl max-w-xl mx-auto lg:mx-0 mb-8">
@@ -104,7 +108,7 @@ export default function FidelidadePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {[
                 { num: 1, title: "Abasteça em um Posto Cacique", desc: "Qualquer abastecimento conta" },
-                { num: 2, title: "Acumule pontos automaticamente", desc: "Sem fazer nada além de abastecer" },
+                { num: 2, title: "Acumule pontos", desc: "Sem fazer nada além de abastecer" },
                 { num: 3, title: "Resgate descontos e vantagens exclusivas", desc: "Escolha entre +100 ofertas imperdíveis" },
               ].map((step, i) => (
                 <motion.div
@@ -162,10 +166,10 @@ export default function FidelidadePage() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {[
-              { icon: "🚗", title: "Motoristas" },
-              { icon: "🚌", title: "Caminhoneiros" },
-              { icon: "🏠", title: "Clientes Locais" },
-              { icon: "🚚", title: "Frotistas" },
+              { Icon: Car, title: "Motoristas" },
+              { Icon: Truck, title: "Caminhoneiros" },
+              { Icon: Home, title: "Clientes Locais" },
+              { Icon: Briefcase, title: "Frotistas" },
             ].map((item, i) => (
               <motion.div
                 key={item.title}
@@ -175,8 +179,8 @@ export default function FidelidadePage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="text-center group"
               >
-                <div className="text-5xl lg:text-6xl mb-4 transition-transform group-hover:scale-110">
-                  {item.icon}
+                <div className="w-20 h-20 lg:w-24 lg:h-24 mx-auto bg-red-50 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
+                  <item.Icon size={36} className="text-[#C8102E]" strokeWidth={2.5} />
                 </div>
                 <h3 className="font-heading font-bold text-[#C8102E] text-base lg:text-lg">
                   {item.title}

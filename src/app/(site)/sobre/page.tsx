@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle2, Target, Eye, Heart } from "lucide-react";
-import type { Metadata } from "next";
 
 const values = [
   { icon: Target, title: "Propósito", text: "Conectar caminhos, gerar valor e crescer junto com quem move o Brasil. Um ecossistema completo que integra abastecimento, conveniência, distribuição e soluções para pessoas e empresas." },
@@ -12,7 +11,7 @@ const values = [
 ];
 
 const timeline = [
-  { year: "1970", title: "O início de tudo", description: "Fundação da Rede Cacique no Nordeste do Brasil. Começa uma história de quase 6 décadas movendo pessoas, empresas e o desenvolvimento da região." },
+  { year: "1968", title: "O início de tudo", description: "Fundação da Rede Cacique no Nordeste do Brasil. Começa uma história de quase 6 décadas movendo pessoas, empresas e o desenvolvimento da região." },
   { year: "1990", title: "Consolidação no Nordeste", description: "A Rede Cacique se firma como referência em abastecimento nas principais rotas do Nordeste do Brasil." },
   { year: "1998", title: "Cacique Lub", description: "Inauguração da Cacique Lubrificantes — distribuidora oficial de lubrificantes, aditivos e produtos automotivos para o mercado B2B." },
   { year: "2010", title: "Tem Conveniência", description: "Lançamento das lojas Tem Conveniência nos postos da rede, ampliando a experiência do cliente nas paradas." },
@@ -23,45 +22,55 @@ const timeline = [
   { year: "2026", title: "Era Digital", description: "Lançamento do Rota Pay e nova plataforma digital integrada — quase 6 décadas conectando caminhos." },
 ];
 
-const familyLegacy = [
-  { generation: "1ª Geração", name: "Fundadores da Rede Cacique", role: "Fundação · 1970" },
-  { generation: "2ª Geração", name: "Família Cacique", role: "Consolidação e expansão regional" },
-  { generation: "3ª Geração", name: "Família Cacique", role: "Modernização, inovação digital e nova era da rede" },
-];
-
 export default function SobrePage() {
   return (
     <>
       {/* Hero */}
       <section className="relative pt-32 pb-24 overflow-hidden">
-        {/* Imagem de fundo — Posto Cacique aéreo */}
+        {/* Imagem de fundo — Vista aérea do ecossistema Cacique completo */}
         <Image
-          src="/images/posto-aereo.png"
-          alt="Vista aérea de um posto Cacique completo — Postos, Tem Conveniência e Cacique Lub"
+          src="/images/hero-sobre-aereo.jpeg"
+          alt="Vista aérea de um complexo Cacique completo com Postos, Tem Conveniência, Oficina e TRR"
           fill
           priority
           className="object-cover object-center"
           sizes="100vw"
         />
-        {/* Overlay para legibilidade do texto */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#C8102E]/65 via-[#8E001A]/70 to-[#0D0D0D]/75" />
-        {/* Vinheta extra no centro para destacar a copy */}
-        <div className="absolute inset-0 bg-radial-gradient" style={{
-          background: "radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, transparent 70%)"
-        }} />
-        {/* Toque de luz dourada */}
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `radial-gradient(circle at 30% 50%, rgba(247,181,0,0.4) 0%, transparent 60%)`
-        }} />
+        {/* Overlay escuro sutil — mesmo padrão das outras heros */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/75 via-[#0D0D0D]/40 to-[#0D0D0D]/65" />
+        {/* Toque vermelho discreto na base */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#8E001A]/25 via-transparent to-transparent" />
+        {/* Vinheta para o centro */}
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0.25) 0%, transparent 70%)" }} />
+
         <div className="container-custom relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <span className="inline-block bg-white/10 text-white text-sm font-bold px-4 py-2 rounded-full mb-6 border border-white/20">
+            <span
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white text-sm font-bold px-4 py-2 rounded-full mb-6 border border-white/20"
+              style={{
+                textShadow: "0 0 15px rgba(27,58,92,0.9), 0 2px 6px rgba(0,0,0,0.7)",
+              }}
+            >
               Sobre a Rede Cacique
             </span>
-            <h1 className="font-heading font-black text-5xl lg:text-7xl text-white mb-6 leading-tight">
-              Quase 60 anos movendo<br /><span className="text-[#F7B500]">pessoas, empresas e o Brasil</span>
+            <h1
+              className="font-heading font-black text-5xl lg:text-7xl text-white mb-6 leading-tight"
+              style={{
+                textShadow:
+                  "0 0 25px rgba(27,58,92,0.95), 0 0 50px rgba(27,58,92,0.7), 0 4px 12px rgba(0,0,0,0.5)",
+              }}
+            >
+              Quase 60 anos movendo
+              <br />
+              <span className="text-[#F7B500]">pessoas, empresas e o Norte e Nordeste</span>
             </h1>
-            <p className="text-white/70 text-xl max-w-3xl mx-auto leading-relaxed">
+            <p
+              className="text-white text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
+              style={{
+                textShadow:
+                  "0 0 15px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.6)",
+              }}
+            >
               Um ecossistema completo que integra abastecimento, conveniência, distribuição
               e soluções para pessoas e empresas, com qualidade e presença nas principais
               rotas do Norte e Nordeste.
@@ -137,41 +146,6 @@ export default function SobrePage() {
         </div>
       </section>
 
-      {/* Legado Familiar */}
-      <section className="section-padding bg-white" id="legado">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <span className="inline-block bg-[#EBF2FA] text-[#1B3A5C] text-sm font-bold px-4 py-2 rounded-full mb-4 uppercase tracking-wide border border-[#C8DCEF]">
-              Empresa Familiar
-            </span>
-            <h2 className="font-heading font-black text-4xl lg:text-5xl text-gray-900 mb-4">
-              Três Gerações de Tradição
-            </h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              Atualmente administrada pela terceira geração da família Carvalho,
-              a Rede Cacique mantém vivo o legado de excelência e inovação iniciado em 1968.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {familyLegacy.map((g, i) => (
-              <motion.div
-                key={g.generation}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-[#F8F9FB] rounded-3xl p-8 border border-[#E8ECF0] text-center hover:shadow-md transition-all"
-              >
-                <div className="inline-block bg-[#1B3A5C] text-white text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
-                  {g.generation}
-                </div>
-                <h3 className="font-heading font-bold text-gray-900 text-base mb-2 leading-snug">{g.name}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{g.role}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

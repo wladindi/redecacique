@@ -13,7 +13,7 @@ const values = [
 ];
 
 const timeline = [
-  { year: "1970", event: "Fundação da Rede Cacique no Nordeste do Brasil" },
+  { year: "1968", event: "Fundação da Rede Cacique no Nordeste do Brasil" },
   { year: "1990", event: "Consolidação como referência em abastecimento no Nordeste" },
   { year: "1998", event: "Inauguração da Cacique Lub — distribuidora oficial de lubrificantes" },
   { year: "2010", event: "Lançamento da Tem Conveniência nos postos da rede" },
@@ -43,7 +43,7 @@ export function AboutSection() {
               </span>
               <h2 id="about-title" className="font-heading font-black text-4xl lg:text-5xl text-gray-900 mb-6">
                 Há quase 6 décadas,
-                <span className="text-[#C8102E]"> impulsionando</span> quem move o Nordeste
+                <span className="text-[#C8102E]"> impulsionando</span> quem move o Norte e Nordeste
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Com qualidade, confiança e eficiência. Mais de 60 postos estrategicamente

@@ -11,21 +11,22 @@ const variants = [
   {
     bg: "bg-[#F7B500]",
     badge: "CONVENIÊNCIA",
-    title: "Tudo o que você precisa, em um só lugar",
+    title: "Sua parada com mais praticidade e conforto",
     paragraphs: [
-      "A versão mais completa da Tem Conveniência reúne variedade, agilidade e praticidade.",
+      "A Tem Conveniência oferece variedade, agilidade e tudo o que você precisa em uma única parada.",
       "Bebidas geladas, snacks, alimentação rápida e itens essenciais para o dia a dia.",
-      "Perfeita para quem quer resolver tudo em uma única parada com conforto e rapidez.",
+      "Perfeita para quem quer resolver tudo com conforto, praticidade e rapidez.",
     ],
     textColor: "text-white",
   },
   {
     bg: "bg-[#2D6FB4]",
     badge: "CONVENIÊNCIA AUTOATENDIMENTO",
-    title: "Entrou, escolheu, pagou, seguiu. Simples assim.",
+    customLogo: "/images/logo-tem-autoatendimento.png",
+    title: "Rapidez e praticidade para seguir viagem",
     paragraphs: [
-      "Pensado para quem valoriza agilidade, a Tem Autoatendimento permite uma experiência rápida e sem complicação.",
-      "Você entra, escolhe, paga e segue viagem com total autonomia.",
+      "Na Tem Autoatendimento, você tem total autonomia: entra, escolhe, paga e segue viagem.",
+      "Uma experiência rápida, sem filas e sem complicações.",
       "Ideal para paradas rápidas, sem perder tempo.",
     ],
     textColor: "text-white",
@@ -33,19 +34,21 @@ const variants = [
   {
     bg: "bg-[#C8102E]",
     badge: "BEER",
-    title: "Seu ponto de pausa para relaxar",
+    customLogo: "/images/logo-tem-beer.png",
+    title: "O ponto de encontro para relaxar",
     paragraphs: [
-      "A Tem Beer traz um ambiente mais descontraído, perfeito para quem quer fazer uma pausa de verdade.",
-      "Bebidas geladas, petiscos e um espaço pensado para relaxar, encontrar amigos e aproveitar o momento.",
+      "A Tem Beer é o ambiente perfeito para uma pausa de verdade.",
+      "Bebidas geladas, petiscos e um espaço descontraído pensado para você relaxar, encontrar amigos e aproveitar cada momento.",
     ],
     textColor: "text-white",
   },
   {
     bg: "bg-[#4A2C20]",
-    badge: "CONVENIÊNCIA",
-    title: "Uma experiência acima do comum",
+    badge: "CONVENIÊNCIA CAFÉ",
+    customLogo: "/images/logo-tem-cafe.png",
+    title: "Uma experiência mais completa e acolhedora",
     paragraphs: [
-      "A versão premium une conveniência com experiência.",
+      "A Tem Conveniência Café une conveniência com experiência.",
       "Cafés especiais, produtos selecionados e um ambiente acolhedor que transforma sua parada em um momento de qualidade.",
       "Ideal para quem valoriza conforto, sofisticação e uma experiência diferenciada.",
     ],
@@ -65,10 +68,10 @@ export default function ConvenienciaPage() {
     <>
       {/* Hero */}
       <section className="pt-32 pb-24 relative overflow-hidden">
-        {/* Imagem de fundo — Interior da Tem Conveniência */}
+        {/* Imagem de fundo — Fachada Tem Conveniência à noite */}
         <Image
-          src="/images/hero-conveniencia.jpg"
-          alt="Interior de uma loja Tem Conveniência"
+          src="/images/hero-conveniencia-fachada.jpg"
+          alt="Fachada de uma loja Tem Conveniência iluminada à noite"
           fill
           priority
           className="object-cover object-center"
@@ -80,15 +83,19 @@ export default function ConvenienciaPage() {
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0.35) 0%, transparent 70%)" }} />
         <div className="container-custom relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            {/* Logo Tem Conveniência (colorida) */}
-            <div className="relative h-56 lg:h-80 w-full max-w-2xl mx-auto mb-10">
+            {/* Logo Tem Conveniência com glow azul nas letras */}
+            <div className="relative h-40 lg:h-72 w-72 lg:w-[34rem] mx-auto mb-10">
               <Image
-                src="/images/logo-tem-color.png"
+                src="/images/logo-tem.png"
                 alt="Tem Conveniência"
                 fill
                 priority
-                className="object-contain drop-shadow-2xl"
-                sizes="(max-width: 1024px) 600px, 800px"
+                className="object-contain"
+                style={{
+                  filter:
+                    "drop-shadow(0 0 25px rgba(27,58,92,0.95)) drop-shadow(0 0 50px rgba(27,58,92,0.7)) drop-shadow(0 4px 12px rgba(0,0,0,0.5))",
+                }}
+                sizes="(max-width: 1024px) 288px, 544px"
               />
             </div>
             <p className="text-white text-xl max-w-2xl mx-auto drop-shadow-lg">
@@ -120,22 +127,17 @@ export default function ConvenienciaPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className={`${v.bg} rounded-3xl p-6 lg:p-8 flex flex-col`}
               >
-                {/* Logo card branco */}
-                <div className="bg-white rounded-2xl p-5 mb-6 shadow-sm">
-                  <div className="relative h-16 lg:h-20 w-full">
+                {/* Logo card branco — quadrado uniforme, logo ajustada visualmente */}
+                <div className="bg-white rounded-2xl p-5 mb-6 shadow-sm overflow-hidden">
+                  <div className="relative w-full h-16 lg:h-20">
                     <Image
-                      src="/images/logo-tem-color.png"
-                      alt="Tem Conveniência"
+                      src={"customLogo" in v && v.customLogo ? (v.customLogo as string) : "/images/logo-tem-color.png"}
+                      alt={"customLogo" in v && v.customLogo ? `Tem ${v.badge}` : "Tem Conveniência"}
                       fill
-                      className="object-contain"
-                      sizes="(max-width: 1024px) 200px, 240px"
+                      className={`object-contain ${"customLogo" in v && v.customLogo ? "scale-150" : ""}`}
+                      sizes="(max-width: 1024px) 240px, 320px"
                     />
                   </div>
-                  {v.badge !== "CONVENIÊNCIA" && (
-                    <p className="text-center text-[10px] font-bold tracking-widest text-[#1B62A8] mt-2 leading-tight uppercase">
-                      {v.badge}
-                    </p>
-                  )}
                 </div>
 
                 {/* Title */}

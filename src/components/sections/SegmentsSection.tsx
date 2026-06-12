@@ -13,15 +13,13 @@ const segments = [
     title: "Postos Cacique",
     subtitle: "",
     logoImage: "/images/logo-postos.png",
+    headerImage: "/images/hero-postos-entardecer.jpg",
     description:
-      "Mais de 60 postos nas principais rotas do Nordeste, com combustível testado e estrutura completa para sua jornada.",
+      "Mais de 60 postos nas principais rotas do Norte e Nordeste, com combustível testado e estrutura completa para sua jornada.",
     features: [
       "Combustível testado em cada carga",
       "Estrutura completa nas principais rotas",
-      "Gasolina Comum e Aditivada",
-      "Etanol e Diesel S-10 / S-500",
-      "Procedência garantida",
-      "Atendimento referência no Nordeste",
+      "Atendimento referência no Norte e Nordeste",
     ],
     cta: "Ver Postos",
     href: "/postos",
@@ -36,6 +34,7 @@ const segments = [
     title: "Tem Conveniência",
     subtitle: "",
     logoImage: "/images/logo-tem.png",
+    headerImage: "/images/hero-conveniencia-fachada.jpg",
     description:
       "Tudo o que você precisa, em um só lugar. Variedade, agilidade e conveniência em cada parada.",
     features: [
@@ -43,7 +42,7 @@ const segments = [
       "Refeições rápidas e essenciais do dia a dia",
       "Tem Autoatendimento — Entrou, escolheu, pagou, seguiu",
       "Tem Beer — Pausa para relaxar com pessoas",
-      "Tem Conveniência Premium — Cafés especiais",
+      "Tem Conveniência Café — Cafés especiais",
       "Ambiente acolhedor e produtos selecionados",
     ],
     cta: "Saiba Mais",
@@ -54,57 +53,12 @@ const segments = [
     featured: false,
   },
   {
-    id: "lubrificantes",
-    icon: Droplets,
-    title: "Cacique Lub",
-    subtitle: "",
-    logoImage: "/images/logo-lub.png",
-    description:
-      "Distribuidora oficial desde 1998. Lubrificantes, aditivos, fluidos automotivos, peças e soluções para mercados automotivo e diesel.",
-    features: [
-      "Lubrificantes premium para todos os motores",
-      "Aditivos e fluidos automotivos",
-      "Peças e soluções para mercado automotivo e diesel",
-      "Atendimento B2B: postos, lojas e frotas",
-      "Suporte para agronegócio e operações diesel",
-      "Presença estratégica em PI e MA",
-    ],
-    cta: "Conhecer",
-    href: "/lubrificantes",
-    color: "from-[#1B3A5C] to-[#0F2540]",
-    bgColor: "bg-[#EBF2FA]",
-    textColor: "text-[#1B3A5C]",
-    featured: false,
-  },
-  {
-    id: "rota-pay",
-    icon: CreditCard,
-    title: "Rota Pay",
-    subtitle: "",
-    logoImage: "/images/logo-rotapay.png",
-    description:
-      "Plataforma fintech da Rede Cacique para simplificar abastecimentos, oferecer benefícios e otimizar a gestão financeira de clientes e empresas.",
-    features: [
-      "Pagamento digital simplificado",
-      "Cashback e benefícios exclusivos",
-      "Controle de despesas em tempo real",
-      "Integração com a rede Cacique",
-      "Segurança e praticidade",
-      "Aceito em todos os postos",
-    ],
-    cta: "Conhecer Rota Pay",
-    href: "/rota-pay",
-    color: "from-[#00875A] to-[#006544]",
-    bgColor: "bg-[#E6F4EE]",
-    textColor: "text-[#00875A]",
-    featured: false,
-  },
-  {
     id: "fidelidade",
     icon: Star,
     title: "Cacique Fidelidade",
     subtitle: "",
     logoImage: "/images/logo-fidelidade.png",
+    headerImage: "/images/app-fidelidade.jpg",
     description:
       "Abasteça, pontue e transforme cada parada em vantagem. Mais de 100 itens com descontos exclusivos.",
     features: [
@@ -123,10 +77,60 @@ const segments = [
     featured: false,
   },
   {
+    id: "rota-pay",
+    icon: CreditCard,
+    title: "Rota Pay",
+    subtitle: "",
+    logoImage: "/images/logo-rotapay.png",
+    headerImage: "/images/hero-rotapay.png",
+    description:
+      "+ Facilidades para você. O banco que está com você em todos os caminhos.",
+    features: [
+      "Recarga de Celular",
+      "Pagamento de Boleto",
+      "Transferências",
+      "Compras no Débito",
+      "Saques em Caixas 24h",
+      "Melhor Preço no Abastecimento",
+    ],
+    cta: "Conhecer Rota Pay",
+    href: "/rota-pay",
+    color: "from-[#00875A] to-[#006544]",
+    bgColor: "bg-[#E6F4EE]",
+    textColor: "text-[#00875A]",
+    featured: false,
+  },
+  {
+    id: "lubrificantes",
+    icon: Droplets,
+    title: "Cacique Lub",
+    subtitle: "",
+    logoImage: "/images/logo-lub-novo.png",
+    headerImage: "/images/hero-lub.jpeg",
+    description:
+      "Distribuidora oficial desde 1998. Lubrificantes, aditivos, fluidos automotivos, peças e soluções para mercados automotivo e industrial.",
+    features: [
+      "Lubrificantes premium para todos os motores",
+      "Aditivos e fluidos automotivos",
+      "Peças e soluções para mercado automotivo e industrial",
+      "Atendimento B2B: postos, lojas e frotas",
+      "Suporte para agronegócio e operações industriais",
+      "Presença estratégica em PI e MA",
+    ],
+    cta: "Conhecer",
+    href: "/lubrificantes",
+    color: "from-[#1B3A5C] to-[#0F2540]",
+    bgColor: "bg-[#EBF2FA]",
+    textColor: "text-[#1B3A5C]",
+    featured: false,
+  },
+  {
     id: "trr",
     icon: Briefcase,
     title: "TRR Cacique",
     subtitle: "Transportadora Revendedora Retalhista",
+    logoImage: "/images/logo-trr.png",
+    headerImage: "/images/hero-trr-base.png",
     description:
       "Distribuição de diesel e combustíveis para grandes consumidores: projetos agrícolas, frotas, construtoras e indústrias.",
     features: [
@@ -134,8 +138,8 @@ const segments = [
       "Atendimento ao agronegócio",
       "Logística especializada",
       "Frota própria para entrega",
-      "Atendimento B2B em PI, MA e PE",
-      "Desde 1993 no mercado",
+      "Atendimento B2B em PI, MA, TO e BA",
+      "Desde 1992 no mercado",
     ],
     cta: "Falar com Vendas",
     href: "/trr",
@@ -182,35 +186,75 @@ export function SegmentsSection() {
             >
               {/* Card */}
               <div className="h-full bg-white border border-gray-100 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500">
-                {/* Header */}
-                <div className={`bg-gradient-to-br ${segment.color} p-8`}>
-                  {!("logoImage" in segment && segment.logoImage) && (
-                    <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-4">
-                      <segment.icon size={28} className="text-white" />
-                    </div>
+                {/* Header com imagem de fundo */}
+                <div className="relative h-56 overflow-hidden">
+                  {/* Imagem de fundo */}
+                  {"headerImage" in segment && segment.headerImage && (
+                    <Image
+                      src={segment.headerImage as string}
+                      alt=""
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                   )}
-                  {"logoImage" in segment && segment.logoImage ? (
-                    <div className="relative h-36 w-64">
-                      <Image
-                        src={segment.logoImage as string}
-                        alt={segment.title}
-                        fill
-                        className="object-contain object-left drop-shadow-xl"
-                        sizes="256px"
-                      />
-                    </div>
-                  ) : (
-                    <>
-                      {segment.subtitle && (
-                        <div className="text-white/70 text-sm font-medium uppercase tracking-wide mb-1">
-                          {segment.subtitle}
+                  {/* Overlay escuro para destacar logo */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
+
+                  {/* Logo com glow azul nas letras */}
+                  <div className="absolute inset-0 flex items-center justify-center p-4">
+                    {"logoImage" in segment && segment.logoImage ? (
+                      <div
+                        className={`relative ${
+                          segment.id === "lubrificantes" ? "h-40 w-72" : "h-24 w-52"
+                        }`}
+                      >
+                        <Image
+                          src={segment.logoImage as string}
+                          alt={segment.title}
+                          fill
+                          className="object-contain"
+                          style={{
+                            filter:
+                              "drop-shadow(0 0 20px rgba(27,58,92,0.95)) drop-shadow(0 0 40px rgba(27,58,92,0.7)) drop-shadow(0 4px 10px rgba(0,0,0,0.6))",
+                          }}
+                          sizes={segment.id === "lubrificantes" ? "288px" : "208px"}
+                        />
+                      </div>
+                    ) : (
+                      <div className="text-center">
+                        <div
+                          className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center mb-2 mx-auto backdrop-blur-sm"
+                          style={{
+                            filter:
+                              "drop-shadow(0 0 15px rgba(27,58,92,0.9)) drop-shadow(0 4px 8px rgba(0,0,0,0.5))",
+                          }}
+                        >
+                          <segment.icon size={24} className="text-white" />
                         </div>
-                      )}
-                      <h3 className="font-heading font-black text-2xl text-white">
-                        {segment.title}
-                      </h3>
-                    </>
-                  )}
+                        {segment.subtitle && (
+                          <div
+                            className="text-white text-[10px] font-medium uppercase tracking-wide mb-0.5"
+                            style={{
+                              textShadow:
+                                "0 0 15px rgba(27,58,92,0.95), 0 2px 6px rgba(0,0,0,0.7)",
+                            }}
+                          >
+                            {segment.subtitle}
+                          </div>
+                        )}
+                        <h3
+                          className="font-heading font-black text-2xl text-white"
+                          style={{
+                            textShadow:
+                              "0 0 20px rgba(27,58,92,0.95), 0 0 40px rgba(27,58,92,0.7), 0 4px 10px rgba(0,0,0,0.6)",
+                          }}
+                        >
+                          {segment.title}
+                        </h3>
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 {/* Body */}

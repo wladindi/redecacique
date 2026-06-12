@@ -9,7 +9,9 @@ interface StationCardProps {
 }
 
 export function StationCard({ station, compact = false }: StationCardProps) {
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${station.lat},${station.lng}`;
+  // Usa endereço completo para o Google geocodificar com precisão
+  const mapsQuery = encodeURIComponent(`${station.name}, ${station.address}, ${station.city} - ${station.state}, Brasil`);
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
 
   return (
     <article

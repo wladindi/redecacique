@@ -30,7 +30,7 @@ export const news: NewsItem[] = [
     title: "TRR Cacique amplia distribuição de diesel para o agronegócio no Piauí",
     slug: "trr-cacique-amplia-agronegocio-piaui",
     excerpt: "A divisão TRR da Rede Cacique reforça o atendimento ao agronegócio com entrega direta de diesel S-10 e S-500 a partir das bases de Bom Jesus e Uruçuí.",
-    content: "O TRR Cacique, divisão de distribuição B2B da Rede Cacique fundada em 1993, ampliou sua operação no agronegócio piauiense...",
+    content: "O TRR Cacique, divisão de distribuição B2B da Rede Cacique fundada em 1992, ampliou sua operação no agronegócio piauiense...",
     imageUrl: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800",
     author: "TRR Cacique",
     publishedAt: "2026-03-28",

@@ -10,7 +10,7 @@ const footerLinks = {
     { label: "Nossa História", href: "/sobre#historia" },
     { label: "Missão e Valores", href: "/sobre#valores" },
     { label: "Notícias", href: "/noticias" },
-    { label: "Trabalhe Conosco", href: "/contato" },
+    { label: "Trabalhe Conosco", href: "https://redecacique.gupy.io/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnO_f0alzsV67PATDxxGC0_dJvJ0sWnEGk0zHbIFzmeyYCwMnNofykL1VBlX0_aem_WbATSZf1YEKi74AnpRyxag", external: true },
   ],
   segmentos: [
     { label: "Postos Cacique", href: "/postos" },
@@ -22,7 +22,6 @@ const footerLinks = {
   ],
   suporte: [
     { label: "Encontrar Posto", href: "/postos" },
-    { label: "Fale Conosco", href: "/contato" },
     { label: "Política de Privacidade", href: "/privacidade" },
     { label: "Termos de Uso", href: "/termos" },
     { label: "LGPD", href: "/lgpd" },
@@ -51,13 +50,13 @@ export function Footer() {
               />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">
-              Desde 1970 no Nordeste. Mais de 60 postos nas principais rotas com
+              Desde 1968 no Nordeste. Mais de 60 postos nas principais rotas com
               combustível testado e estrutura completa. Quase 6 décadas de excelência.
             </p>
             <div className="flex flex-col gap-3 text-sm text-gray-400">
-              <a href="tel:8632288888" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="tel:86994362307" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone size={15} className="text-[#C8102E] flex-shrink-0" />
-                <span>(86) 3228-8888 · Sede Teresina</span>
+                <span>(86) 99436-2307 · Sede Teresina</span>
               </a>
               <a href="mailto:contato@redecacique.com.br" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Mail size={15} className="text-[#C8102E] flex-shrink-0" />
@@ -83,7 +82,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/558632288888"
+                href="https://wa.me/5586994362307"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-11 h-11 bg-white/10 hover:bg-[#25D366] rounded-xl flex items-center justify-center transition-all hover:-translate-y-1 text-white"
@@ -103,16 +102,30 @@ export function Footer() {
                 {key === "empresa" ? "Empresa" : key === "segmentos" ? "Segmentos" : "Suporte"}
               </h4>
               <ul className="flex flex-col gap-3">
-                {links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-gray-400 hover:text-white hover:translate-x-1 transition-all inline-block"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {links.map((link) => {
+                  const isExternal = "external" in link && link.external;
+                  return (
+                    <li key={link.href}>
+                      {isExternal ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-gray-400 hover:text-white hover:translate-x-1 transition-all inline-block"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-sm text-gray-400 hover:text-white hover:translate-x-1 transition-all inline-block"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

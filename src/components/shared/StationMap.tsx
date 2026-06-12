@@ -61,6 +61,7 @@ export function StationMap({ stations, singleStation }: StationMapProps) {
           },
         });
 
+        const mapsQuery = encodeURIComponent(`${station.name}, ${station.address}, ${station.city} - ${station.state}, Brasil`);
         const infoWindow = new window.google.maps.InfoWindow({
           content: `
             <div style="font-family: Inter, sans-serif; padding: 4px; max-width: 200px;">
@@ -68,7 +69,7 @@ export function StationMap({ stations, singleStation }: StationMapProps) {
               <p style="margin: 4px 0; font-size: 12px; color: #666;">${station.address}</p>
               <p style="margin: 4px 0; font-size: 12px; color: #666;">${station.city} - ${station.state}</p>
               <p style="margin: 4px 0; font-size: 12px; color: #333;">${station.hours}</p>
-              <a href="https://www.google.com/maps/search/?api=1&query=${station.lat},${station.lng}"
+              <a href="https://www.google.com/maps/search/?api=1&query=${mapsQuery}"
                  target="_blank"
                  style="display:inline-block; margin-top:6px; background:#C8102E; color:white; padding:4px 10px; border-radius:20px; font-size:11px; text-decoration:none; font-weight:bold;">
                 Ver Rota
@@ -119,7 +120,7 @@ export function StationMap({ stations, singleStation }: StationMapProps) {
           {stationsToShow.map((station) => (
             <a
               key={station.id}
-              href={`https://www.google.com/maps/search/?api=1&query=${station.lat},${station.lng}`}
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${station.name}, ${station.address}, ${station.city} - ${station.state}, Brasil`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-white rounded-xl p-3 border border-gray-100 hover:shadow-md transition-all text-sm"

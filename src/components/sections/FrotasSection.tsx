@@ -7,8 +7,8 @@ import { TrendingDown, BarChart3, Zap, UserCheck, RefreshCw, ShieldCheck, ArrowR
 const benefits = [
   {
     icon: TrendingDown,
-    title: "Até 25% de economia",
-    description: "Reduza até 25% no custo de combustível da sua operação com condições exclusivas para frotas.",
+    title: "Economia no abastecimento",
+    description: "Reduza até 5% no custo de combustível da sua operação com condições exclusivas para frotas.",
   },
   {
     icon: BarChart3,
@@ -122,7 +122,7 @@ export function FrotasSection() {
           className="text-center mb-12 lg:mb-16"
         >
           <span className="inline-block bg-[#F7B500]/10 text-[#F7B500] text-sm font-bold px-4 py-2 rounded-full mb-4 tracking-wide uppercase border border-[#F7B500]/20">
-            Cacique Frotas
+            Seja um parceiro CACIQUE
           </span>
           <h2 id="frotas-title" className="font-heading font-black text-4xl lg:text-5xl text-white mb-4 leading-tight">
             Abastecimento deixa de ser custo
@@ -136,8 +136,8 @@ export function FrotasSection() {
             comerciais personalizadas que vão além do preço e geram resultado no dia a dia.
           </p>
           <p className="text-white/60 text-base max-w-2xl mx-auto mt-4 italic">
-            Mais do que negociar combustível, a Comercial Cacique entrega gestão, segurança e
-            inteligência aplicada ao abastecimento.
+            Mais do que negociar combustível, O comercial da Rede Cacique entrega gestão,
+            segurança e inteligência aplicada ao abastecimento.
           </p>
         </motion.div>
 
@@ -171,7 +171,7 @@ export function FrotasSection() {
         >
           <div className="text-center mb-8">
             <span className="inline-block bg-[#C8102E] text-white text-sm font-bold px-4 py-2 rounded-full mb-3 tracking-wide uppercase">
-              Faça seu cadastro
+              Fale com o nosso time comercial
             </span>
             <h3 className="font-heading font-black text-3xl text-white">
               Reduza seu custo de combustível

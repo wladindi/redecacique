@@ -4,7 +4,7 @@ export const dynamic = "force-dynamic";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Briefcase, Droplet, Truck, Factory, Tractor, Building2, ArrowRight, CheckCircle } from "lucide-react";
+import { Droplet, Truck, Factory, Tractor, Building2, ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 const products = [
@@ -25,10 +25,10 @@ export default function TRRPage() {
     <>
       {/* Hero — Cinematográfico com vista aérea do terminal TRR */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
-        {/* Imagem de fundo — Terminal TRR aéreo */}
+        {/* Imagem de fundo — Base TRR Cacique ao entardecer */}
         <Image
-          src="/images/hero-trr.png"
-          alt="Terminal TRR Cacique — vista aérea"
+          src="/images/hero-trr-base.png"
+          alt="Base TRR Cacique ao entardecer com caminhões-tanque e picape Cacique"
           fill
           priority
           className="object-cover object-center"
@@ -43,19 +43,12 @@ export default function TRRPage() {
 
         <div className="container-custom relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white text-sm font-bold px-4 py-2 rounded-full mb-6 border border-white/20">
-              <Briefcase size={14} />
-              Desde 1993 · Cacique Derivados de Petróleo
-            </span>
-            <h1 className="font-heading font-black text-5xl lg:text-7xl text-white mb-6 leading-tight drop-shadow-2xl">
-              TRR <span className="text-[#F7B500]">Cacique</span>
-            </h1>
             <p className="text-white text-lg lg:text-xl max-w-3xl mx-auto drop-shadow-lg">
               Transportadora Revendedora Retalhista. Distribuição de diesel e combustíveis
-              para grandes consumidores no Piauí, Maranhão e Pernambuco.
+              para grandes consumidores no Piauí, Maranhão, Tocantins e Bahia.
             </p>
             <div className="flex flex-wrap gap-4 justify-center mt-8">
-              <Link href="/contato" className="flex items-center gap-2 bg-[#F7B500] hover:bg-[#D49A00] text-gray-900 font-bold px-8 py-4 rounded-full transition-all hover:shadow-2xl hover:-translate-y-0.5">
+              <Link href="/#cacique-frotas" className="flex items-center gap-2 bg-[#F7B500] hover:bg-[#D49A00] text-gray-900 font-bold px-8 py-4 rounded-full transition-all hover:shadow-2xl hover:-translate-y-0.5">
                 Falar com Vendas
                 <ArrowRight size={18} />
               </Link>
@@ -156,7 +149,7 @@ export default function TRRPage() {
           <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
             Entre em contato com nossa equipe comercial e descubra como o TRR Cacique pode atender sua empresa
           </p>
-          <Link href="/contato" className="inline-flex items-center gap-2 bg-white text-[#C8102E] font-bold text-lg px-10 py-4 rounded-full transition-all hover:shadow-xl hover:-translate-y-0.5">
+          <Link href="/#cacique-frotas" className="inline-flex items-center gap-2 bg-white text-[#C8102E] font-bold text-lg px-10 py-4 rounded-full transition-all hover:shadow-xl hover:-translate-y-0.5">
             Falar com Vendas
             <ArrowRight size={20} />
           </Link>
